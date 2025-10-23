@@ -1,8 +1,8 @@
-# 🧮 Individual Assignment — Matrix Multiplication Benchmark
+# Individual Assignment — Matrix Multiplication Benchmark
 
 This repository compares the performance of **matrix multiplication** implemented in **Python**, **Java**, and **C++**, using professional benchmarking tools and following best software engineering practices.
 
-## 📂 Project Structure
+## Project Structure
 ```
 IndividualAssignment/
 │
@@ -33,34 +33,31 @@ IndividualAssignment/
     └── merge_benchmarks.py    # Merges CSV results into one file
 ```
 
-## ⚙️ How to Run
+##  How to Run
 
-### 🐍 Python
+### Python
 ```bash
 cd python
 python bench.py --sizes 64 128 256 --runs 7 --csv ../results/python_bench.csv
 ```
 
-### ☕ Java (JMH)
+### Java (JMH)
 ```bash
 cd java
 mvn clean package
 java -jar target/benchmarks.jar -rf csv -rff ../results/java_bench.csv
 ```
 
-### 💻 C++
+### C++
 ```bash
 cd cpp
 cl /O2 matrix.cpp
 matrix.exe > ../results/cpp_bench.csv
 ```
 
-### 📊 Combine Results
-```bash
-python tools/merge_benchmarks.py results/python_bench.csv results/java_bench.csv results/cpp_bench.csv -o results/combined_bench.csv
-```
 
-## 🧪 Methodology
+
+## Methodology
 - Separation of production code, testing, and benchmarking.
 - Several runs for each experiment to compute mean and deviation.
 - Parametrized matrix sizes (64, 128, 256).
@@ -69,21 +66,21 @@ python tools/merge_benchmarks.py results/python_bench.csv results/java_bench.csv
   - `JMH` (Java)
   - `std::chrono` (C++)
 
-## 📈 Example Results
+## Example Results
 | Size (n) | Python (ms) | Java (ms) | C++ (ms) |
 |-----------|--------------|-----------|----------|
 | 64        | 14.2         | 1.3       | 0.9      |
 | 128       | 112.0        | 8.6       | 7.4      |
 | 256       | 875.0        | 67.9      | 59.3     |
 
-## 🧾 Paper
+## Paper
 The complete report (LaTeX + PDF) is located in the `/paper` folder and includes:
 - Methodology
 - Experimental setup
 - Profiling analysis
 - Discussion and conclusions
 
-## 🧠 Author
+## Author
 **Raúl Mendoza**  
 Universidad de Las Palmas de Gran Canaria (ULPGC)
 
