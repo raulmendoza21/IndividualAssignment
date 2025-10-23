@@ -1,0 +1,4 @@
+language,impl,n,time_s
+cpp,naive,64,0.0001605
+cpp,naive,128,0.0016928
+cpp,naive,256,0.0095542
